@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+header {
+    display: flex;
+    background-color: rgba(133, 168, 189, 1);
+    justify-content: space-between;
+    padding: 12px;
+    top: 0;
+    width: 100vw;
+    position: fixed;
+}
+
+.links {
+    display: flex;
+    width: 50rem;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(133, 168, 189, 0.838);
+    font-size: 1.2rem;
+}
+
+.loggedIn {
+    display: flex;
+    width: 20rem;
+    align-items: center;
+    justify-content: end;
+    background-color: rgba(133, 168, 189, 0.838);
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#welcome{
+    background-color: rgba(128, 54, 213, 0.688);
+    height: 50%;
+}
+
+#logout{
+    font-size: 1rem;
+    width: 5rem;
+    height: 2.5rem;
+}
