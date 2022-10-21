@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import './Form.css'
 
-const CryptoEdit = (props) => {
+const CryptoEdit = (user) => {
 
     const [cryptoName, setCryptoName] = useState('');
     const [cryptoQuantity, setcryptoQuantity] = useState(0);
@@ -40,7 +40,7 @@ const CryptoEdit = (props) => {
         }).then(res => {
             console.log(res);
             console.log(res.data);
-            navigate('/list');})
+            navigate(`/list/:${user.username}`);})
             .catch(err => {console.log("Error on submission", err)});
 
     }
