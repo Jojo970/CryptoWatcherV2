@@ -21,7 +21,7 @@ function App() {
           <Route path = "/" element = {<HomePage/>}/>
           <Route path = "/list/:username" element = {<CryptoList />} />
           <Route path = "/add" element = {<CryptoForm user = {user} setUser = {setUser}/>} />
-          <Route path = "/edit/:id" element = {<CryptoEdit/>} />
+          <Route path = "/edit/:id" element = {<CryptoEdit user = {user} />} />
           <Route path = "/login" element = {<Login setLoggedIn={setLoggedIn} user = {user} setUser = {setUser}/>} />
           <Route path = "/register" element = {<Register setLoggedIn={setLoggedIn} user = {user} setUser = {setUser}/>} />
         </Routes>
