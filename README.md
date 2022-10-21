@@ -5,5 +5,7 @@ Crypto Price tracking Web App that utilizes CoinGecko API
 
 ![](giphy.gif)
 
+The app connects to CoinGecko API to have a list of all available cryptocurrencies.
 
+Whenever user presses reload, the prices are updated based on real time prices.
 
