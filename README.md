@@ -1,7 +1,9 @@
 # CryptoTrack
 Crypto Price tracking Web App that utilizes CoinGecko API
 
-## To Do List
+## How it Works
 
-3. Create Amazon EC2 instance of this app
+![](giphy.gif)
+
+
 
