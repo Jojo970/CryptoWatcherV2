@@ -1,12 +1,18 @@
 {
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.1",
     "buffer": "^6.0.3",
     "coingecko-api": "^1.0.10",
+    "formik": "^2.2.9",
     "https-browserify": "^1.0.0",
     "querystring-es3": "^0.2.1",
+    "react-pro-sidebar": "^1.0.0",
     "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1",
     "stream-http": "^3.2.0",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "yup": "^1.1.1"
   }
 }

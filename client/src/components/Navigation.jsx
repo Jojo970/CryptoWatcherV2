@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import './Navigation.css'
 
 const Navigation = ({loggedIn, setLoggedIn, user, setUser}) => {
 
@@ -60,6 +59,6 @@ const Navigation = ({loggedIn, setLoggedIn, user, setUser}) => {
             </div>
         </header>
     )
-}
+};
 
 export default Navigation;

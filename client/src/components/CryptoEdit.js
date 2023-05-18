@@ -19,7 +19,7 @@ const CryptoEdit = (props) => {
             res.data.map((crypto) => list.push(crypto.id))
             setCryptoList(list)
         }).catch(err => console.log(err, "error in getting cryptos"))
-    }, [])
+    }, []) 
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/cryptowatcher/${id}`)
