@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    background-color: rgb(208, 218, 232);
 }
 
 .container {
@@ -8,21 +9,21 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-top: 40px;
     flex-direction: column;
-    background-color: lightsteelblue;
+
+    z-index: -1;
 }
 
 .container table{
     border: 1px solid rgb(155, 100, 100);
     margin: 15px 30px;
     position: relative;
-    top: 15%;
+    
 }
 #reload{
     font-size: 1.2em;
     position: relative;
-    top: 10%;
     
 }
 

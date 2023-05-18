@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import './Form.css'
 
-const CryptoEdit = (props) => {
+const CryptoEdit = (user) => {
 
     const [cryptoName, setCryptoName] = useState('');
     const [cryptoQuantity, setcryptoQuantity] = useState(0);
@@ -40,7 +40,7 @@ const CryptoEdit = (props) => {
         }).then(res => {
             console.log(res);
             console.log(res.data);
-            navigate('/list');})
+            navigate(`/list/:${user.username}`);})
             .catch(err => {console.log("Error on submission", err)});
 
     }
@@ -48,8 +48,8 @@ const CryptoEdit = (props) => {
   return (
     <form onSubmit={onSubmitHandler}>
         <p>
-        <label>Crypto Name</label>
-            <select value={cryptoName} name = "cryptoName" onChange={(e) => setCryptoName(e.target.value)}>
+        <label className='stuff'>Crypto Name</label>
+            <select className='stuff' value={cryptoName} name = "cryptoName" onChange={(e) => setCryptoName(e.target.value)}>
                 {cryptoList.map((name) => {
                     return(
                         <option>{name}</option>
@@ -58,10 +58,12 @@ const CryptoEdit = (props) => {
             </select>
         </p>
         <p>
-            <label>Crypto Amount</label>
-            <input type= 'number' step= '0.00000001' value = {cryptoQuantity} onChange = {(e)=>setcryptoQuantity(e.target.value)}/>
+            <label className='stuff'>Crypto Amount</label>
+            <input className='stuff' type= 'number' step= '0.00000001' value = {cryptoQuantity} onChange = {(e)=>setcryptoQuantity(e.target.value)}/>
         </p>
+        <p>
         <button style = {{fontSize: '1.2em'}}>Change the Crytpo</button>
+        </p>
     </form>
   )
 }

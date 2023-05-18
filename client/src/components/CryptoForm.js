@@ -41,9 +41,10 @@ const CryptoForm = ({user, setUser}) => {
 
   return (
     <form onSubmit={onSubmitHandler}>
+        <h1 className='stuff'>Crypto Add Form</h1>
         <p>
-            <label>Crypto Name</label>
-            <select value={cryptoName} name = "cryptoName" onChange={(e) => setCryptoName(e.target.value)}>
+            <label className='stuff'>Crypto Name</label>
+            <select className='stuff' value={cryptoName} name = "cryptoName" onChange={(e) => setCryptoName(e.target.value)}>
                 {cryptoList.map((name) => {
                     return(
                         <option>{name}</option>
@@ -52,10 +53,12 @@ const CryptoForm = ({user, setUser}) => {
             </select>
         </p>
         <p>
-            <label>Crypto Amount</label>
-            <input type= 'number' step= '0.00000001' onChange = {(e)=>setcryptoQuantity(parseInt(e.target.value))}/>
+            <label className='stuff'>Crypto Amount</label>
+            <input className='stuff' type= 'number' step= '0.00000001' onChange = {(e)=>setcryptoQuantity(parseInt(e.target.value))}/>
         </p>
+        <p>
         <button>Add Crypto</button>
+        </p>
     </form>
   )
 }

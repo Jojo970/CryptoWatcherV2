@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import "./Form.css"
 
 const Register = ({ setLoggedIn }) => {
     const navigate = useNavigate();
@@ -29,21 +30,32 @@ const Register = ({ setLoggedIn }) => {
     };
     return (
         <form onSubmit={handleSubmit}>
-        <label style = {{backgroundColor: 'black', margin: '22px', padding: '5px 25px', color:'white'}} htmlFor="username">Username:</label>
-        <input type="text" name="username" value={user.username} onChange={handleChange} required />
-        <label style = {{backgroundColor: 'black', margin: '22px', padding: '5px 25px', color:'white'}} htmlFor="email">Email:</label>
-        <input type="email" name="email" value={user.email} onChange={handleChange} required />
-        <label style = {{backgroundColor: 'black', margin: '22px', padding: '5px 25px', color:'white'}} htmlFor="password">Password:</label>
-        <input type="password" name="password" value={user.password} onChange={handleChange} required />
-        <label style = {{backgroundColor: 'black', margin: '22px', padding: '5px 25px', color:'white'}} htmlFor="confirmPassword">Confirm Password:</label>
-        <input
-            type="password"
-            name="confirmPassword"
-            value={user.confirmPassword}
-            onChange={handleChange}
-            required
-        />
-        <button>Register</button>
+            <h1 className='stuff'>Register</h1>
+        <p>
+            <label className='stuff' htmlFor="username">Username:</label>
+            <input className='stuff'  type="text" name="username" value={user.username} onChange={handleChange} required />
+        </p>
+        <p>
+            <label className='stuff' htmlFor="email">Email:</label>
+            <input className='stuff'  type="email" name="email" value={user.email} onChange={handleChange} required />
+        </p>
+        <p>
+            <label className='stuff' htmlFor="password">Password:</label>
+            <input className='stuff' type="password" name="password" value={user.password} onChange={handleChange} required />
+        </p>
+        <p>
+            <label className='stuff' htmlFor="confirmPassword">Confirm Password:</label>
+            <input className='stuff' 
+                type="password"
+                name="confirmPassword"
+                value={user.confirmPassword}
+                onChange={handleChange}
+                required
+            />
+        </p>
+        <p>
+            <button>Register</button>
+        </p>
         </form>
     );
 };

@@ -26,32 +26,30 @@ const Navigation = ({loggedIn, setLoggedIn, user, setUser}) => {
     return (
         <header>
             <div>
-                <h1>
+                <h1 id='title'>
                     CryptoWatch
                 </h1>
             </div>
             <div className='links'>
-                <NavLink to="/">
-                    Home
-                </NavLink>
-                <NavLink to="/add">
-                    Add Crypto
-                </NavLink>
                 {user? (
                     <div className='loggedIn'>
-                        <NavLink to= {`/list/:${user.username}`}>
+                        <NavLink id='clickLink' to="/add">
+                            Add Crypto
+                        </NavLink>
+                        
+                        <NavLink id='clickLink' to= {`/list/:${user.username}`}>
                             Crypto List
                         </NavLink>
                         <p id='welcome' >Hello: {user.username}</p>
                         <button id= 'logout' onClick={handleLogout}>Logout</button>
                     </div>
                 ) : (
-                    <div >
-                        <NavLink to = "/login">
+                    <div style={{backgroundColor: "rgba(133, 168, 189, 1)"}}>
+                        <NavLink id='clickLink' to = "/login">
                             Login
                         </NavLink>
-                        <span> / </span>
-                        <NavLink to = "/register">
+                        <span id='clickLink'> / </span>
+                        <NavLink id='clickLink' to = "/register">
                             Register
                         </NavLink>
                     </div>

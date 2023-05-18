@@ -1,8 +1,10 @@
 form{ 
-    display: flex;
-    justify-content: space-around;
     height: 30rem;
-    align-items: center;
+    margin: 10% 20%;
+    padding-top: 5%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 5%;
 }
 
 button {
@@ -12,16 +14,28 @@ button {
     height: 50px;
     font-size: 1.5em;
     border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 p {
     display: flex;
     align-items: center;
+    justify-content: center;
+    vertical-align: middle;
     margin: 5px;
-    background-color: aliceblue;
     height: 50px;
     padding: 10px;
     border-radius: 15%;
+    background-color: rgb(255, 255, 255);
+}
+
+.stuff{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 label {
